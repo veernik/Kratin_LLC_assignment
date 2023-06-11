@@ -1,0 +1,109 @@
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
+
+class Medication {
+    private String name;
+    private LocalTime time;
+
+    public Medication(String name, LocalTime time) {
+        this.name = name;
+        this.time = time;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public LocalTime getTime() {
+        return time;
+    }
+}
+
+class MedicationTracker {
+    private List<Medication> medications;
+
+    public MedicationTracker() {
+        medications = new ArrayList<>();
+    }
+
+    public void addMedication(Medication medication) {
+        medications.add(medication);
+        System.out.println("Medication added successfully.");
+    }
+
+    public void displayMedications() {
+        System.out.println("List of Medications:");
+        for (Medication medication : medications) {
+            System.out.println("Medication: " + medication.getName());
+            System.out.println("Time: " + medication.getTime());
+            System.out.println("-------------------------");
+        }
+    }
+
+    public void setMedicationReminders() {
+        Timer timer = new Timer();
+        for (Medication medication : medications) {
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    System.out.println("Reminder: It's time to take " + medication.getName());
+                }
+            }, medication.getTime().getHour() * 3600000L + medication.getTime().getMinute() * 60000L);
+        }
+    }
+}
+
+public class HealthCareApp {
+    public static void main(String[] args) {
+        MedicationTracker medicationTracker = new MedicationTracker();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("\n----- Medication Tracker Menu -----");
+            System.out.println("1. Add Medication");
+            System.out.println("2. Display Medications");
+            System.out.println("3. Set Medication Reminders");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline character
+
+            switch (choice) {
+                case 1:
+                    System.out.println("\n----- Add Medication -----");
+                    System.out.print("Enter the medication name: ");
+                    String name = scanner.nextLine();
+
+                    System.out.print("Enter the medication time (HH:MM format): ");
+                    String timeInput = scanner.nextLine();
+                    LocalTime time = LocalTime.parse(timeInput);
+
+                    Medication medication = new Medication(name, time);
+                    medicationTracker.addMedication(medication);
+                    break;
+
+                case 2:
+                    System.out.println("\n----- Display Medications -----");
+                    medicationTracker.displayMedications();
+                    break;
+
+                case 3:
+                    System.out.println("\n----- Set Medication Reminders -----");
+                    medicationTracker.setMedicationReminders();
+                    break;
+
+                case 4:
+                    System.out.println("Exiting the program. Goodbye!");
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+}
