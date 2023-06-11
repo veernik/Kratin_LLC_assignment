@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elderly Healthcare By Kratin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body style="background-color: rgb(112, 241, 224);">
+    <img src="https://st.depositphotos.com/1028979/4049/i/600/depositphotos_40493159-stock-photo-doctor-working-with-healthcare-icons.jpg" alt="Trulli" width="400" height="300">
+    <img src="https://media.istockphoto.com/id/1290679873/photo/female-doctor-holding-hands-and-supporting-patient.jpg?s=612x612&w=0&k=20&c=8Y-30mh_hC9k01zyQS7UWwhjC4YL23YaxXHuGVQBuX0=" alt="Trulli" width="400" height="300">
+    <img src="https://thumbs.dreamstime.com/b/blackboard-text-health-wealth-stethoscope-blue-wooden-background-medecine-concept-blackboard-text-health-109546118.jpg" alt="Trulli" width="490" height="300">
+    <a href="tel:+1234567890" class="button">Call Doctor</a>
+    <a href="go to alarm section" class="button">Set Reminder</a>
+
+    <div class="container">
+    <h1>Elderly Healthcare by Kratin</h1>
+    <p>Welcome to our elderly healthcare page ! We provide resources and information to help you live a healthier life.</p>
+    
+    <h2>Useful Links:</h2>
+    <ul>
+      <li><a href="https://www.nia.nih.gov/">National Institute on Aging</a></li>
+      <li><a href="https://www.cdc.gov/aging/">CDC Healthy Aging</a></li>
+      <li><a href="https://www.medicare.gov/">Medicare</a></li>
+    </ul>
+    
+    <h2>Exercise Tips:</h2>
+    <p>Regular exercise is important for maintaining good health. Here are a few exercise ideas:</p>
+    <ul>
+      <li>Walking in the park or around your neighborhood</li>
+      <li>Swimming or water aerobics</li>
+      <li>Yoga or green tea</li>
+      <li>Keep Smilling and dont take any worries</li>
+    </ul>
+    
+    <h2>Healthy Eating:</h2>
+    <p>Eating a balanced diet is crucial for overall well-being. Here are some tips:</p>
+    <ul>
+      <li>Include fruits and vegetables in your meals</li>
+      <li>Choose whole grains over refined grains</li>
+      <li>Limit the consumption of processed foods and sugary snacks</li>
+    </ul>
+    
+    <p>Remember to consult with your healthcare provider before starting any new exercise or diet plan.</p>
+    
+    <h2>Get in Touch:</h2>
+    <p>If you have any questions or need assistance, feel free to contact us:</p>
+    <a href="tel:+1234567890" class="button">Call Us: 123-456-7890</a>
+    <br>
+    <a href="mailto:info@example.com" class="button">Email Us: info@example.com</a>
+  </div>
+</body>
+</html>
